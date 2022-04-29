@@ -43,7 +43,6 @@ func merge(cs ...<-chan int) <-chan int {
 	}
 
 	wg.Add(len(cs))
-
 	for _, c := range cs {
 		go output(c)
 	}
